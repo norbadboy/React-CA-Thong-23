@@ -1,43 +1,32 @@
 import React from "react";
-import styled from "styled-components";
+import Header from "./components/header";
+import { Outlet, Routes, Route } from "react-router-dom";
+import ContactPage from "./routes/ContactPage";
+import ProductsPage from "./routes/ProductsPage";
 
-import { Routes, Route, Link } from "react-router-dom";
-
-function Home() {
-  return <div>Home</div>;
+function Footer() {
+  return <footer>Website footer</footer>;
 }
 
-function Products() {
-  return <div>Products</div>;
-}
-
-function RouteNotFound() {
-  return <div>Page not found</div>;
-}
-
-function Nav() {
+function Layout() {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/products">Products</Link>
-        </li>
-      </ul>
-    </nav>
+    <div>
+      <Header />
+      <Outlet />
+      <Footer />
+    </div>
   );
 }
 
 function App() {
   return (
     <div>
-      <Nav />
       <Routes>
-        <Route index element={<Home />} />
-        <Route path="products" element={<Products />} />
-        <Route path="*" element={<RouteNotFound />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<h1>Hello</h1>} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+        </Route>
       </Routes>
     </div>
   );

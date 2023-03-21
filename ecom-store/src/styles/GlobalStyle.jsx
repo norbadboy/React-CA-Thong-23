@@ -21,11 +21,14 @@ const GlobalStyle = createGlobalStyle`
         --color-danger-light: #ff8f71;
         --color-danger-dark: #b21f00;
         --color-neutral-0: #ffffff;
+        --color-background: #1e1e1e;
     }
     body {
         height: 100%;
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
+        font-family: "Roboto", sans-serif;
     }
 `;
 
