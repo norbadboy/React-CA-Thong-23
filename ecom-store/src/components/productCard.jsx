@@ -1,6 +1,6 @@
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { StyledButton } from "../styles/StyledComponents/styledButton";
 
 function ProductCard(props) {
   const { product } = props;
@@ -10,9 +10,9 @@ function ProductCard(props) {
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
         <Card.Text>{product.description}</Card.Text>
-        <Card.Text>{product.price}</Card.Text>
+        <Card.Text>$ {product.price}</Card.Text>
         <Link to={`/product/${product.id}`}>
-          <Button variant="primary">View</Button>
+          <StyledButton variant="primary">View</StyledButton>
         </Link>
       </Card.Body>
     </Card>

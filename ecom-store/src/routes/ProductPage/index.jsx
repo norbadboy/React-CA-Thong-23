@@ -1,7 +1,7 @@
-import { Button } from "react-bootstrap";
 import { API_ECOM_PATH } from "../../api/constants.mjs";
 import { useParams } from "react-router-dom";
 import useAPI from "../../api/apiHook.jsx";
+import { Button } from "react-bootstrap";
 
 const url = API_ECOM_PATH;
 
@@ -29,7 +29,6 @@ function ProductPage() {
           <h3>{product.title}</h3>
           <p>{product.description}</p>
           <p>{product.price}</p>
-
           <Button variant="primary">Add to Cart</Button>
         </div>
         <div>

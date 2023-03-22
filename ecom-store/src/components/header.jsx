@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/sass/header.scss";
-import { Button, Container, Navbar } from "react-bootstrap";
+import { Container, Navbar } from "react-bootstrap";
 
 function NavbarComponent() {
   return (
