@@ -6,15 +6,18 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import Theme from "./styles/theme";
 import GlobalStyle from "./styles/GlobalStyle";
+import { Container } from "react-bootstrap";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
-    <Theme>
-      <GlobalStyle />
-      <App />
-    </Theme>
-  </BrowserRouter>
+  <Container>
+    <BrowserRouter>
+      <Theme>
+        <GlobalStyle />
+        <App />
+      </Theme>
+    </BrowserRouter>
+  </Container>
 );
 
 // If you want to start measuring performance in your app, pass a function

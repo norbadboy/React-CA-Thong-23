@@ -1,11 +1,14 @@
 .nav {
   background-color: #1e1e1e;
-  color: #ff0080;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   padding: 0 1rem;
+}
+
+.brand {
+  color: #ff0080;
 }
 
 .logo {

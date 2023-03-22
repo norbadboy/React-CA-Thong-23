@@ -1,32 +1,34 @@
 import { Link } from "react-router-dom";
 import "../styles/sass/header.scss";
+import { Button, Container, Navbar, Modal } from "react-bootstrap";
 
-function Navbar() {
+function NavbarComponent() {
   return (
-    <nav className="nav">
-      <a href="/" className="logo">
-        eCom Store
-      </a>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/contact">Contact</Link>
-        </li>
-        <li>
-          <Link to="/products">Products</Link>
-        </li>
-      </ul>
-    </nav>
+    <Navbar expand="sm" className="nav">
+      <Container>
+        <Navbar.Brand className="brand">
+          <Link to="/">Ecom Store</Link>
+        </Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text>
+            <Link to="/">Home</Link>
+          </Navbar.Text>
+          <Navbar.Text>
+            <Link to="/contact">Contact</Link>
+          </Navbar.Text>
+          <Button> Cart 0 It</Button>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
 function Header() {
   return (
-    <div>
-      <Navbar />
-    </div>
+    <header>
+      <NavbarComponent />
+    </header>
   );
 }
 

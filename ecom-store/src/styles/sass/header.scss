@@ -2,12 +2,14 @@
 
 .nav {
   background-color: map-get($colors, "background");
-  color: map-get($colors, "primary");
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
   padding: 0 1rem;
+}
+.brand {
+  color: map-get($colors, "primary");
 }
 
 .logo {
