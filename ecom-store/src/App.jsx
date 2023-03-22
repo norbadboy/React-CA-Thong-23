@@ -1,16 +1,12 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/header";
+import Footer from "./components/footer";
 import { Outlet, Routes, Route } from "react-router-dom";
 import ContactPage from "./routes/ContactPage";
 import HomePage from "./routes/HomePage";
 import CheckoutPage from "./routes/CheckoutPage";
-
-// localhost:3000 -> home page
-
-function Footer() {
-  return <footer>Website footer</footer>;
-}
+import ProductPage from "./routes/ProductPage";
 
 function Layout() {
   return (
@@ -31,6 +27,7 @@ function App() {
           <Route path="/home" element={<HomePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<CheckoutPage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
         </Route>
       </Routes>
     </div>
