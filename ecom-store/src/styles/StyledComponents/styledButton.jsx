@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Theme from "../theme";
 
 const BaseButton = styled.button`
   padding: 8px 17px;
@@ -13,10 +12,10 @@ const BaseButton = styled.button`
 `;
 
 export const StyledButton = styled(BaseButton)`
-  background-color: ${Theme.colors.primary};
-  color: ${Theme.colors.white};
+  background-color: ${(props) => props.theme.color.primary};
+  color: ${(props) => props.theme.color.neutral0};
 
-  :hover {
-    background-color: ${Theme.colors.primaryDark};
+  &:hover {
+    background-color: ${(props) => props.theme.color.primaryDark};
   }
 `;

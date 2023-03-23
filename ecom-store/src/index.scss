@@ -3,3 +3,7 @@
 h1 {
   color: map-get($colors, "primary");
 }
+
+* {
+  letter-spacing: 0.04rem;
+}
