@@ -15,13 +15,14 @@ const StyledInput = styled.input`
   outline: none;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.secondaryDark};
-  margin-bottom: 1.4rem;
+  margin-bottom: 1rem;
 `;
 
 const StyledParagraph = styled.p`
   color: ${(props) => props.theme.color.dangerDark};
   font-size: 0.8rem;
   margin-bottom: 0.2rem;
+  margin-top: 0;
 `;
 
 const StyledTextArea = styled.textarea`

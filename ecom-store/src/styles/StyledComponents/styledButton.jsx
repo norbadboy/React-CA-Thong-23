@@ -19,3 +19,8 @@ export const StyledButton = styled(BaseButton)`
     background-color: ${(props) => props.theme.color.primaryDark};
   }
 `;
+
+export const StyledButtonSecondary = styled(BaseButton)`
+  background-color: ${(props) => props.theme.color.secondaryDark};
+  color: ${(props) => props.theme.color.neutral0};
+`;

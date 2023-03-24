@@ -34,6 +34,7 @@ function ContactPage() {
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
+    mode: "all",
   });
 
   const onSubmit = (data) => {

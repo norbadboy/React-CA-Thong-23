@@ -35,4 +35,22 @@
 
 .nav li:hover {
   background-color: #ffffff;
+}
+
+.dropdown {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #4d5a6f;
+}
+
+.dropdown:empty {
+  display: none;
+}
+
+.dropdownRow {
+  position: relative;
+  cursor: pointer;
+  text-align: start;
+  margin: 2px 0;
 }/*# sourceMappingURL=header.css.map */
