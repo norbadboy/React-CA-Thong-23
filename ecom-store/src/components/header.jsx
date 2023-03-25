@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "../styles/sass/header.scss";
 import { Container, Navbar } from "react-bootstrap";
 import SearchBar from "./searchBar.jsx";
+import { FaShoppingCart } from "react-icons/fa";
 
 function NavbarComponent() {
   return (
@@ -26,7 +27,9 @@ function NavbarComponent() {
                 <Link to="/contact">Contact</Link>
               </Navbar.Text>
               <Navbar.Text>
-                <Link to="/cart">Cart</Link>
+                <Link to="/cart">
+                  <FaShoppingCart />
+                </Link>
               </Navbar.Text>
             </Navbar.Collapse>
           </div>
