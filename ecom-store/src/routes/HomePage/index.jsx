@@ -9,30 +9,21 @@ const url = API_ECOM_PATH;
 
 function HomePage() {
   const { data, loading, error } = useAPI(url);
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [searchParams] = useSearchParams();
   const [items, setItems] = useState([]);
 
   const searchText = searchParams.get("search");
-  console.log("searchText", searchText);
-
-  // useEffect(() => {
-  //   console.log("Trigger effect when data is changed");
-  //   setItems(data);
-  // }, [data]);
 
   useEffect(() => {
-    console.log("Trigger effect when searchText is changed");
     if (searchText && data.length > 0) {
       const filteredProducts = [...data].filter((product) => {
         return product.title.toLowerCase().includes(searchText.toLowerCase());
       });
       setItems(filteredProducts);
-      console.log("filter", filteredProducts);
     } else {
       setItems(data);
     }
   }, [searchText, data]);
-  console.log("items", items);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -41,8 +32,6 @@ function HomePage() {
   if (error) {
     return <div>Error...</div>;
   }
-
-  //
 
   return (
     <>

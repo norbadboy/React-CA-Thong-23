@@ -4,14 +4,14 @@ import { StyledButtonSecondary } from "../styles/StyledComponents/styledButton";
 import useAPI from "../api/apiHook";
 import { API_ECOM_PATH } from "../api/constants.mjs";
 import "../styles/sass/header.scss";
-import { useSearchParams, serializeFormQuery } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 const url = API_ECOM_PATH;
 
 function SearchBar() {
   const [value, setValue] = useState("");
   const { data: products } = useAPI(url);
-  let [searchParams, setSearchParams] = useSearchParams();
+  let [, setSearchParams] = useSearchParams();
 
   const onSubmitForm =
     ("submit",
