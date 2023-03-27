@@ -7,6 +7,7 @@ import ContactPage from "./routes/ContactPage";
 import HomePage from "./routes/HomePage";
 import CheckoutPage from "./routes/CheckoutPage";
 import ProductPage from "./routes/ProductPage";
+import ShoppingCartProvider from "./contexts/shoppingCartContext";
 
 function Layout() {
   return (
@@ -20,7 +21,7 @@ function Layout() {
 
 function App() {
   return (
-    <div>
+    <ShoppingCartProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<HomePage />} />
@@ -30,7 +31,7 @@ function App() {
           <Route path="/product/:id" element={<ProductPage />} />
         </Route>
       </Routes>
-    </div>
+    </ShoppingCartProvider>
   );
 }
 
