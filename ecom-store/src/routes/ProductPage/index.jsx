@@ -10,7 +10,7 @@ const url = API_ECOM_PATH;
 function ProductPage() {
   let { id } = useParams();
   const { data: product, loading, error } = useAPI(`${url}/${id}`);
-  const { shoppingCart, addItemToCart, removeItemFromCart } = useContext(ShoppingCartContext);
+  const { addItemToCart } = useContext(ShoppingCartContext);
 
   if (loading) {
     return <div>Loading...</div>;

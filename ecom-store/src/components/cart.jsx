@@ -4,7 +4,6 @@ import { useContext } from "react";
 
 export default function ShoppingCartIcon() {
   const { shoppingCart, addItemToCart, removeItemFromCart } = useContext(ShoppingCartContext);
-  console.log("shoppingCart :>> ", shoppingCart);
 
   return (
     <>
