@@ -1,16 +1,20 @@
 import { useContext } from "react";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import useAPI from "../../api/apiHook";
 import { API_ECOM_PATH } from "../../api/constants.mjs";
 import { ShoppingCartContext } from "../../contexts/shoppingCartContext";
 import { StyledButton } from "../../styles/StyledComponents/styledButton";
+import { useNavigate } from "react-router-dom";
 
 const url = API_ECOM_PATH;
 
 function Checkout() {
-  const { shoppingCart, addItemToCart, removeItemFromCart } = useContext(ShoppingCartContext);
+  const { shoppingCart, addItemToCart, removeItemFromCart, clearAllItems } =
+    useContext(ShoppingCartContext);
 
   const { data, loading, error } = useAPI(url);
+
+  const navigate = useNavigate();
 
   if (loading) {
     return <div>Loading...</div>;
@@ -26,9 +30,14 @@ function Checkout() {
     checkoutItems = shoppingCart.map((id) => data.find((item) => item.id === id));
   }
 
+  const onGoToCheckoutButtonClick = () => {
+    clearAllItems();
+    navigate("/checkoutSuccess");
+  };
+
   return (
     <>
-      <h1>Chekout Page!</h1>
+      <h1>Checkout Page!</h1>
       {checkoutItems.map((item, index) => (
         <div key={item.id + index}>
           <div>{item.title}</div>
@@ -37,6 +46,9 @@ function Checkout() {
           <StyledButton onClick={() => removeItemFromCart(item.id)}>Remove</StyledButton>
         </div>
       ))}
+      <Button className="mt-3" onClick={onGoToCheckoutButtonClick}>
+        Check out
+      </Button>
     </>
   );
 }

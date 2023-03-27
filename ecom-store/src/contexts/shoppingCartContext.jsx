@@ -24,8 +24,14 @@ function ShoppingCartProvider({ children }) {
     setShoppingCart(newShoppingCart);
   };
 
+  const clearAllItems = () => {
+    setShoppingCart([]);
+  };
+
   return (
-    <ShoppingCartContext.Provider value={{ shoppingCart, addItemToCart, removeItemFromCart }}>
+    <ShoppingCartContext.Provider
+      value={{ shoppingCart, addItemToCart, removeItemFromCart, clearAllItems }}
+    >
       {children}
     </ShoppingCartContext.Provider>
   );
