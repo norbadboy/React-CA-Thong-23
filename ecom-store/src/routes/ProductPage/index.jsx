@@ -28,7 +28,7 @@ function ProductPage() {
   return (
     <>
       <h1 align="center" className="my-5 pt-5 ">
-        Product Page
+        Product
       </h1>
       <div xs={1} md={3} className="g-4">
         <Row align="center">

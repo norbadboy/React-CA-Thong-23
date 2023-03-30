@@ -8,23 +8,30 @@ function Price(props) {
   const { originalPrice, discountedPrice } = props;
   const discountPercentage = calculateDiscountedPrice(originalPrice, discountedPrice);
 
-  return (
-    <div className="price d-flex flex-column">
-      <span className="d-flex justify-content-center">
-        <p className="me-2">Origin:</p>
-        <div style={{ textDecoration: "line-through" }} className="original-price">
-          ${originalPrice}
+  if (discountedPrice === originalPrice) {
+    return (
+      <div className="d-flex justify-content-center">
+        <strong className="me-2">Price: </strong>
+        <span className="originalPrice">${originalPrice}</span>
+      </div>
+    );
+  } else {
+    return (
+      <div className="d-flex flex-column align-items-center">
+        <div className="d-flex">
+          <strong className="me-2">Price: </strong>
+          <span className="originalPrice" style={{ textDecoration: "line-through" }}>
+            ${originalPrice}
+          </span>
         </div>
-      </span>
-      <span className="d-flex justify-content-center">
-        <p className="me-2">Discounted:</p>
-        <div className="discounted-price">${discountedPrice}</div>
-        <div>
-          <p className="discount-percentage ms-1">({discountPercentage} off) </p>
+        <div className="mt-2">
+          <strong>Discounted:</strong>
+          <span className="price me-2"> ${discountedPrice}</span>
+          <span className="discountBadge">({discountPercentage} off)</span>
         </div>
-      </span>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default Price;

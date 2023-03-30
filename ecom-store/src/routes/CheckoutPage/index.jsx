@@ -37,10 +37,10 @@ function Checkout() {
   return (
     <div className="d-flex flex-column">
       <Row className="my-5 pt-5 ">
-        <h1 className="d-flex justify-content-center">Checkout Page!</h1>
+        <h1 className="d-flex justify-content-center">Checkout</h1>
       </Row>
       <Row>
-        <div className="d-flex">
+        <div className="checkoutContainer d-flex">
           <Card className="px-5 py-4 flex-grow-1">
             {checkoutItems.map((item, index) => (
               <div
@@ -50,9 +50,9 @@ function Checkout() {
                 <h5 className="mb-2">{item.title}</h5>
                 <div className="d-flex border-bottom pb-2">
                   <img className="checkoutImage" src={item.imageUrl} alt={item.title} />{" "}
-                  <div className="ms-4 d-flex">
+                  <div className=" d-flex checkoutItemsContainer">
                     <div className="d-flex align-items-center">$ {item.discountedPrice}</div>
-                    <div className="d-flex align-items-center ms-5">
+                    <div className="d-flex align-items-center checkoutItemsRemoveButton">
                       <StyledButtonSecondary
                         style={{ height: 45 }}
                         onClick={() => removeItemFromCart(item.id)}
@@ -70,7 +70,7 @@ function Checkout() {
               <h5 className="mb-2">Total</h5>
               <div className="d-flex">
                 <div className="d-flex align-items-center mb-1">
-                  $ {checkoutItems.reduce((acc, item) => acc + item.discountedPrice, 0)}
+                  $ {checkoutItems.reduce((acc, item) => acc + item.discountedPrice, 0).toFixed(2)}
                 </div>
               </div>
             </div>

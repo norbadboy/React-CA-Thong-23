@@ -34,6 +34,47 @@ a:hover {
   border-radius: 5px;
 }
 
+@media screen and (min-width: 768px) {
+  .checkoutContainer {
+    display: flex;
+  }
+}
+@media screen and (max-width: 768px) {
+  .checkoutContainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .checkoutItemsContainer {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .checkoutItemsContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .checkoutItemsRemoveButton {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  .checkoutItemsRemoveButton {
+    margin-left: 50px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .checkoutItemsRemoveButton {
+    margin-left: 30px;
+  }
+}
+
 .checkoutImage {
   height: 100px;
   width: 100px;
@@ -46,4 +87,19 @@ a:hover {
   color: #c5004f;
   font-size: 1rem;
   margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footerRowContainer {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footerCol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
 }/*# sourceMappingURL=index.css.map */

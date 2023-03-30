@@ -43,8 +43,8 @@ function ContactPage() {
 
   return (
     <>
-      <Card className="mx-5 my-4">
-        <h1 align="center" className="mt-3">
+      <Card className="mx-5 my-5">
+        <h1 align="center" className="mt-4">
           Contact Us
         </h1>
         <StyledForm onSubmit={handleSubmit(onSubmit)}>

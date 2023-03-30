@@ -1,7 +1,7 @@
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import { Row, Col, Card } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Footer() {
@@ -11,17 +11,21 @@ function Footer() {
 
   return (
     <Card className="mt-5 mb-3 p-3">
-      <Row>
+      <div>
         <h3>Information</h3>
-      </Row>
-      <Row className="d-flex justify-content-between mt-2">
-        <Col>
+      </div>
+      <div className="footerRowContainer d-flex justify-content-between mt-2">
+        <div className="footerCol">
           <h5>Home</h5>
           <div>
             <Link to="/">Home page</Link>
           </div>
-        </Col>
-        <Col className="d-flex flex-column align-items-center" d-flex justify-content-around>
+        </div>
+        <div
+          className="footerCol d-flex flex-column align-items-center"
+          d-flex
+          justify-content-around
+        >
           <h5>Contact Us</h5>
           <div>
             <Link to="/contact">Contact page</Link>
@@ -31,8 +35,8 @@ function Footer() {
               Phone: <u> 00 11 22 33 </u>
             </p>
           </div>
-        </Col>
-        <Col>
+        </div>
+        <div className="footerCol">
           <h5 className="d-flex justify-content-end">Social Media</h5>
           <div className="d-flex me-5 justify-content-end">
             <a
@@ -64,13 +68,13 @@ function Footer() {
               {twitterIcon}
             </a>
           </div>
-        </Col>
-      </Row>
-      <Row>
+        </div>
+      </div>
+      <div>
         <p className="text-center mt-3">
           &copy; {new Date().getFullYear()} Ecom Store. All rights reserved.
         </p>
-      </Row>
+      </div>
     </Card>
   );
 }

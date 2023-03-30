@@ -7,7 +7,10 @@ export default function ShoppingCartIcon() {
 
   return (
     <>
-      <FaShoppingCart /> {shoppingCart.length > 0 && shoppingCart.length}
+      <div className="me-1">
+        <FaShoppingCart />
+      </div>
+      {shoppingCart.length > 0 && shoppingCart.length}
     </>
   );
 }
