@@ -7,3 +7,41 @@ h1 {
 * {
   letter-spacing: 0.04rem;
 }
+
+a {
+  color: map-get($colors, "primary-dark");
+  text-decoration: none;
+}
+a:hover {
+  color: map-get($colors, "primary-dark");
+}
+
+.homePageCard {
+  height: 570px;
+}
+.homePageCard img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.productImage {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+//checkout page
+.checkoutImage {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.footerIcon {
+  color: map-get($colors, "primary-dark");
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}

@@ -4,4 +4,46 @@ h1 {
 
 * {
   letter-spacing: 0.04rem;
+}
+
+a {
+  color: #c5004f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #c5004f;
+}
+
+.homePageCard {
+  height: 570px;
+}
+
+.homePageCard img {
+  height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.productImage {
+  height: 450px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.checkoutImage {
+  height: 100px;
+  width: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+}
+
+.footerIcon {
+  color: #c5004f;
+  font-size: 1rem;
+  margin: 0 0.5rem;
 }/*# sourceMappingURL=index.css.map */

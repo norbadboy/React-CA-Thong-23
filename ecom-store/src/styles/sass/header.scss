@@ -9,9 +9,6 @@
 }
 .brand {
   color: map-get($colors, "primary");
-}
-
-.logo {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.05rem;
@@ -26,32 +23,33 @@
   padding: 0.25rem;
 }
 
-.nav ul {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  gap: 1rem;
-}
-
 .nav li:hover {
   background-color: map-get($colors, "neutral-0");
+}
+
+.searchBar {
+  margin-top: 85px;
+}
+
+.searchInputGroup {
+  border-radius: 10px;
+  border-color: map-get($colors, "tertiary-dark");
+  color: map-get($colors, "tertiary-dark");
 }
 
 .dropdown {
   background-color: map-get($colors, "neutral-0");
   display: flex;
+  justify-content: start;
   flex-direction: column;
-  border: 1px solid map-get($colors, "tertiary-dark");
+  border-bottom: 0.3px solid;
+  border-left: 0.3px solid;
+  border-right: 0.3px solid;
+  border-radius: 5px;
+  border-color: map-get($colors, "tertiary-dark");
+  cursor: pointer;
 }
 
 .dropdown:empty {
   display: none;
-}
-
-.dropdownRow {
-  position: relative;
-  cursor: pointer;
-  text-align: start;
-  margin: 2px 0;
 }
