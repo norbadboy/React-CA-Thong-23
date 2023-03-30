@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Row, Card, Col } from "react-bootstrap";
+import { Row, Card } from "react-bootstrap";
 import useAPI from "../../api/apiHook";
 import { API_ECOM_PATH } from "../../api/constants.mjs";
 import { ShoppingCartContext } from "../../contexts/shoppingCartContext";
