@@ -4,6 +4,7 @@ import ProductCard from "../../components/productCard.jsx";
 import useAPI from "../../api/apiHook.jsx";
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import SearchBar from "../../components/searchBar.jsx";
 
 const url = API_ECOM_PATH;
 
@@ -35,9 +36,10 @@ function HomePage() {
 
   return (
     <>
-      <h1 align="center" className="p-3">
+      <h1 align="center" className="mt-5 pt-5">
         Welcome to the store!
       </h1>
+      <SearchBar />
       <Row xs={1} md={3} className="g-4">
         {items.map((product) => (
           <Col align="center" key={product.id}>

@@ -5,6 +5,7 @@ import useAPI from "../api/apiHook";
 import { API_ECOM_PATH } from "../api/constants.mjs";
 import "../styles/sass/header.scss";
 import { useSearchParams } from "react-router-dom";
+import { Dropdown } from "react-bootstrap";
 
 const url = API_ECOM_PATH;
 
@@ -33,7 +34,7 @@ function SearchBar() {
   };
 
   return (
-    <div className="my-3">
+    <div className="searchBar mb-5">
       <Form onSubmit={onSubmitForm}>
         <InputGroup>
           <Form.Control
@@ -42,6 +43,7 @@ function SearchBar() {
             name="search"
             value={value}
             onChange={onChange}
+            className="searchInputGroup"
           />
           <StyledButtonSecondary type="submit">Search</StyledButtonSecondary>
         </InputGroup>
@@ -56,9 +58,9 @@ function SearchBar() {
           }) // Filter out products that don't match the search term
           .slice(0, 5) // Limit to 5 results
           .map((product) => (
-            <div onClick={() => onSearch(product.title)} className="dropdownRow" key={product.id}>
-              <p>{product.title}</p>
-            </div>
+            <Dropdown onClick={() => onSearch(product.title)} key={product.id}>
+              <p className="pt-3 ps-3">{product.title}</p>
+            </Dropdown>
           ))}
       </div>
     </div>

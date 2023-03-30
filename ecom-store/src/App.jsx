@@ -8,6 +8,7 @@ import HomePage from "./routes/HomePage";
 import CheckoutPage from "./routes/CheckoutPage";
 import ProductPage from "./routes/ProductPage";
 import ShoppingCartProvider from "./contexts/shoppingCartContext";
+import SuccessPage from "./routes/CheckoutSuccessPage";
 
 function Layout() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<CheckoutPage />} />
           <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/checkoutSuccess" element={<SuccessPage />} />
         </Route>
       </Routes>
     </ShoppingCartProvider>
