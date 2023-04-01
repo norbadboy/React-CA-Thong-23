@@ -1,5 +1,5 @@
 h1 {
-  color: #ff0080;
+  color: #a30052;
 }
 
 * {
@@ -7,12 +7,12 @@ h1 {
 }
 
 a {
-  color: #c5004f;
+  color: #a30052;
   text-decoration: none;
 }
 
 a:hover {
-  color: #c5004f;
+  color: #a30052;
 }
 
 .bodyContainer {
@@ -20,6 +20,11 @@ a:hover {
 }
 
 @media screen and (min-width: 768px) {
+  .homePageTitle--container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
   .homePageCard {
     height: 585px;
   }
@@ -34,6 +39,9 @@ a:hover {
   }
 }
 @media screen and (max-width: 768px) {
+  .homePageTitle--container {
+    margin: 100px 0 0 0;
+  }
   .homePageCard {
     height: 100%;
   }
@@ -45,12 +53,18 @@ a:hover {
   }
 }
 @media screen and (max-width: 425px) {
+  .homePageTitle--container {
+    display: none;
+  }
   .homePageCard {
     height: 540px;
     margin: 0 5px 0 5px;
   }
   .homePageCard img {
     height: 50%;
+  }
+  .searchBar {
+    margin-top: 135px;
   }
 }
 .reviewsTitle {
@@ -138,7 +152,7 @@ a:hover {
 }
 
 .footerIcon {
-  color: #c5004f;
+  color: #a30052;
   font-size: 1rem;
   margin: 0 0.5rem;
 }

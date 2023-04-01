@@ -5,7 +5,7 @@ $tabletBreakpoint: 768px;
 $mobileBreakpoint: 425px;
 
 h1 {
-  color: map-get($colors, "primary");
+  color: map-get($colors, "primary-dark");
 }
 
 * {
@@ -25,6 +25,11 @@ a:hover {
   background-color: map-get($colors, "tertiary-dark");
 }
 @media screen and (min-width: $tabletBreakpoint) {
+  .homePageTitle--container {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+  }
   .homePageCard {
     height: 585px;
   }
@@ -38,6 +43,9 @@ a:hover {
   }
 }
 @media screen and (max-width: $tabletBreakpoint) {
+  .homePageTitle--container {
+    margin: 100px 0 0 0;
+  }
   .homePageCard {
     height: 100%;
   }
@@ -49,12 +57,18 @@ a:hover {
   }
 }
 @media screen and (max-width: $mobileBreakpoint) {
+  .homePageTitle--container {
+    display: none;
+  }
   .homePageCard {
     height: 540px;
     margin: 0 5px 0 5px;
   }
   .homePageCard img {
     height: 50%;
+  }
+  .searchBar {
+    margin-top: 135px;
   }
 }
 
