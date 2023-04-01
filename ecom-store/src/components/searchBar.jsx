@@ -36,17 +36,19 @@ function SearchBar() {
   return (
     <div className="searchBar mb-5">
       <Form onSubmit={onSubmitForm}>
-        <InputGroup>
-          <Form.Control
-            type="text"
-            placeholder="Search"
-            name="search"
-            value={value}
-            onChange={onChange}
-            className="searchInputGroup"
-          />
-          <StyledButtonSecondary type="submit">Search</StyledButtonSecondary>
-        </InputGroup>
+        <div className="inputContainer d-flex justify-content-center">
+          <InputGroup>
+            <Form.Control
+              type="text"
+              placeholder="Search"
+              name="search"
+              value={value}
+              onChange={onChange}
+              className="searchInputGroup"
+            />
+            <StyledButtonSecondary type="submit">Search</StyledButtonSecondary>
+          </InputGroup>
+        </div>
       </Form>
       <div className="dropdown">
         {products

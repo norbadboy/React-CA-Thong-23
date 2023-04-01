@@ -12,7 +12,7 @@ function ProductCard(props) {
       <Card.Img variant="top" src={product.imageUrl} />
       <Card.Body>
         <Card.Title>{product.title}</Card.Title>
-        <Card.Text>
+        <Card.Text className="homePageCard--text px-2" style={{ textAlign: "left" }}>
           {product.description.substring(
             0,
             Math.min(trimmedString.length, trimmedString.lastIndexOf(" "))

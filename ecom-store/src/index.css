@@ -15,53 +15,102 @@ a:hover {
   color: #c5004f;
 }
 
-.homePageCard {
-  height: 570px;
-}
-
-.homePageCard img {
-  height: 250px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.productImage {
-  height: 450px;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 5px;
-}
-
 @media screen and (min-width: 768px) {
-  .checkoutContainer {
-    display: flex;
+  .homePageCard {
+    height: 585px;
+  }
+  .homePageCard img {
+    height: 250px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .searchBar {
+    padding: 0 150px 0 150px;
   }
 }
 @media screen and (max-width: 768px) {
-  .checkoutContainer {
-    flex-direction: column;
+  .homePageCard {
+    height: 100%;
+  }
+  .homePageCard img {
+    height: 100%;
+  }
+  .searchBar {
+    padding: 0;
   }
 }
-
+@media screen and (max-width: 425px) {
+  .homePageCard {
+    height: 540px;
+    margin: 0 5px 0 5px;
+  }
+  .homePageCard img {
+    height: 50%;
+  }
+}
 @media screen and (min-width: 768px) {
+  .productPageContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+  .productImage {
+    height: 500px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5px;
+  }
+  .productTitle {
+    justify-content: start;
+  }
+  .productTextContainer {
+    text-align: left;
+    padding: 0 50 0 50;
+  }
+}
+@media screen and (max-width: 768px) {
+  .productPageContainer {
+    flex-direction: column;
+  }
+  .productTitle {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 0;
+  }
+  .productImage {
+    height: 400px;
+    border-radius: 10px;
+  }
+  .productTextContainer {
+    text-align: center;
+  }
+  .priceContainer {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .checkoutPageContainer {
+    display: flex;
+  }
   .checkoutItemsContainer {
+    margin-left: 50px;
+  }
+  .checkoutItemsRemoveButton {
     margin-left: 50px;
   }
 }
 @media screen and (max-width: 768px) {
+  .checkoutPageContainer {
+    flex-direction: column;
+  }
   .checkoutItemsContainer {
     flex-direction: column;
     justify-content: center;
     align-items: end;
     margin-left: 0;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .checkoutItemsRemoveButton {
-    margin-left: 50px;
   }
 }
 @media screen and (max-width: 768px) and (min-width: 425px) {
@@ -93,9 +142,6 @@ a:hover {
   .footerRowContainer {
     flex-direction: column;
   }
-}
-
-@media screen and (max-width: 768px) {
   .footerCol {
     display: flex;
     flex-direction: column;

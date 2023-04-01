@@ -35,8 +35,8 @@ function HomePage() {
   }
 
   return (
-    <>
-      <h1 align="center" className="mt-5 pt-5">
+    <div className="homePageContainer px-2">
+      <h1 align="center" className="mt-5 pt-4">
         Welcome to the store!
       </h1>
       <SearchBar />
@@ -47,7 +47,7 @@ function HomePage() {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   );
 }
 
