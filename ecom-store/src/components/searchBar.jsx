@@ -1,4 +1,3 @@
-import { Form, InputGroup } from "react-bootstrap";
 import { useState } from "react";
 import { StyledButtonSecondary } from "../styles/StyledComponents/styledButton";
 import useAPI from "../api/apiHook";
@@ -6,6 +5,7 @@ import { API_ECOM_PATH } from "../api/constants.mjs";
 import "../styles/sass/header.scss";
 import { useSearchParams } from "react-router-dom";
 import { Dropdown } from "react-bootstrap";
+import { Form, InputGroup } from "react-bootstrap";
 
 const url = API_ECOM_PATH;
 

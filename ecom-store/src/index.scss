@@ -1,6 +1,6 @@
 @use "./styles/sass/variables" as *;
 
-$productImageHeight: 500px;
+$productImageHeight: 470px;
 $tabletBreakpoint: 768px;
 $mobileBreakpoint: 425px;
 
@@ -21,6 +21,9 @@ a:hover {
 }
 
 //home page
+.bodyContainer {
+  background-color: map-get($colors, "tertiary-dark");
+}
 @media screen and (min-width: $tabletBreakpoint) {
   .homePageCard {
     height: 585px;
@@ -56,6 +59,9 @@ a:hover {
 }
 
 //product page
+.reviewsTitle {
+  color: map-get($colors, "secondary");
+}
 @media screen and (min-width: $tabletBreakpoint) {
   .productPageContainer {
     display: flex;
@@ -100,9 +106,6 @@ a:hover {
 
 //checkout page
 @media screen and (min-width: $tabletBreakpoint) {
-  .checkoutPageContainer {
-    display: flex;
-  }
   .checkoutItemsContainer {
     margin-left: 50px;
   }
@@ -153,5 +156,10 @@ a:hover {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+  }
+  .footerTitleContainer {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
   }
 }

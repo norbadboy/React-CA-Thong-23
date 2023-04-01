@@ -40,7 +40,7 @@ function Checkout() {
         <h1 className="d-flex justify-content-center">Checkout</h1>
       </Row>
       <Row>
-        <div className="checkoutContainer d-flex">
+        <div className="checkoutPageContainer d-flex">
           <Card className="px-5 py-4 flex-grow-1">
             {checkoutItems.map((item, index) => (
               <div

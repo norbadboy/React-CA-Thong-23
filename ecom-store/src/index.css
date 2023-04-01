@@ -15,6 +15,10 @@ a:hover {
   color: #c5004f;
 }
 
+.bodyContainer {
+  background-color: #323f54;
+}
+
 @media screen and (min-width: 768px) {
   .homePageCard {
     height: 585px;
@@ -49,13 +53,17 @@ a:hover {
     height: 50%;
   }
 }
+.reviewsTitle {
+  color: #f2bfbf;
+}
+
 @media screen and (min-width: 768px) {
   .productPageContainer {
     display: flex;
     justify-content: space-between;
   }
   .productImage {
-    height: 500px;
+    height: 470px;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
@@ -92,9 +100,6 @@ a:hover {
   }
 }
 @media screen and (min-width: 768px) {
-  .checkoutPageContainer {
-    display: flex;
-  }
   .checkoutItemsContainer {
     margin-left: 50px;
   }
@@ -147,5 +152,10 @@ a:hover {
     flex-direction: column;
     align-items: center;
     margin-bottom: 2rem;
+  }
+  .footerTitleContainer {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
   }
 }/*# sourceMappingURL=index.css.map */

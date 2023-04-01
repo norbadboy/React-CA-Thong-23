@@ -32,8 +32,8 @@
 
 .searchInputGroup {
   border-radius: 10px;
-  border-color: #4d5a6f;
-  color: #4d5a6f;
+  border-color: #323f54;
+  color: #323f54;
 }
 
 .dropdown {
@@ -45,7 +45,7 @@
   border-left: 0.3px solid;
   border-right: 0.3px solid;
   border-radius: 5px;
-  border-color: #4d5a6f;
+  border-color: #323f54;
   cursor: pointer;
 }
 
