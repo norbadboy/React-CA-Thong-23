@@ -11,7 +11,7 @@ function Footer() {
 
   return (
     <Card className="mt-5 mb-3 p-3">
-      <div>
+      <div className="footerTitleContainer">
         <h3>Information</h3>
       </div>
       <div className="footerRowContainer d-flex justify-content-between mt-2">
@@ -38,35 +38,37 @@ function Footer() {
         </div>
         <div className="footerCol">
           <h5 className="d-flex justify-content-end">Social Media</h5>
-          <div className="d-flex me-5 justify-content-end">
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footerIcon"
-            >
-              {facebookIcon}
-            </a>
-          </div>
-          <div className="d-flex me-5 justify-content-end">
-            <a
-              href="https://www.instagram.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footerIcon"
-            >
-              {instagramIcon}
-            </a>
-          </div>
-          <div className="d-flex me-5 justify-content-end">
-            <a
-              href="https://www.twitter.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="footerIcon"
-            >
-              {twitterIcon}
-            </a>
+          <div className="d-flex justify-content-center">
+            <div className="facebookIcon">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footerIcon"
+              >
+                {facebookIcon}
+              </a>
+            </div>
+            <div className="instagramIcon">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footerIcon"
+              >
+                {instagramIcon}
+              </a>
+            </div>
+            <div className="twitterIcon">
+              <a
+                href="https://www.twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="footerIcon"
+              >
+                {twitterIcon}
+              </a>
+            </div>
           </div>
         </div>
       </div>

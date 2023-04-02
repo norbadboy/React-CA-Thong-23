@@ -1,4 +1,4 @@
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import { API_ECOM_PATH } from "../../api/constants.mjs";
 import ProductCard from "../../components/productCard.jsx";
 import useAPI from "../../api/apiHook.jsx";
@@ -35,10 +35,13 @@ function HomePage() {
   }
 
   return (
-    <>
-      <h1 align="center" className="mt-5 pt-5">
-        Welcome to the store!
-      </h1>
+    <div className="homePageContainer px-2">
+      <div className="homePageTitle--container">
+        <Card className="homePageTitle--card d-flex p-4 flex-column justify-content-center align-items-center">
+          <h1>Welcome to the store</h1>
+          <p>Here, you can find anything!</p>
+        </Card>
+      </div>
       <SearchBar />
       <Row xs={1} md={3} className="g-4">
         {items.map((product) => (
@@ -47,7 +50,7 @@ function HomePage() {
           </Col>
         ))}
       </Row>
-    </>
+    </div>
   );
 }
 

@@ -10,22 +10,22 @@ function Price(props) {
 
   if (discountedPrice === originalPrice) {
     return (
-      <div className="d-flex justify-content-center">
+      <div className="priceContainer d-flex">
         <strong className="me-2">Price: </strong>
         <span className="originalPrice">${originalPrice}</span>
       </div>
     );
   } else {
     return (
-      <div className="d-flex flex-column align-items-center">
+      <div className="priceContainer d-flex flex-column" style={{ textAlign: "left" }}>
         <div className="d-flex">
-          <strong className="me-2">Price: </strong>
+          <strong className="me-2">Price before: </strong>
           <span className="originalPrice" style={{ textDecoration: "line-through" }}>
             ${originalPrice}
           </span>
         </div>
-        <div className="mt-2">
-          <strong>Discounted:</strong>
+        <div>
+          <strong>Price now:</strong>
           <span className="price me-2"> ${discountedPrice}</span>
           <span className="discountBadge">({discountPercentage} off)</span>
         </div>
