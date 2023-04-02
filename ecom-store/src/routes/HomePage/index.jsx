@@ -39,7 +39,7 @@ function HomePage() {
       <div className="homePageTitle--container">
         <Card className="homePageTitle--card d-flex p-4 flex-column justify-content-center align-items-center">
           <h1>Welcome to the store</h1>
-          <p>Here, you can find anything!</p>
+          <h5 className="mt-3">Here, you can buy anything!</h5>
         </Card>
       </div>
       <SearchBar />

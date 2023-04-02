@@ -25,11 +25,14 @@ a:hover {
     display: flex;
     justify-content: center;
   }
+  .homePageTitle--card {
+    background-color: #f7e6e6;
+  }
   .homePageCard {
     height: 585px;
   }
   .homePageCard img {
-    height: 250px;
+    height: 280px;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;

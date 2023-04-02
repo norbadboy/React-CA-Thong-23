@@ -19,22 +19,25 @@ a {
 a:hover {
   color: map-get($colors, "primary-dark");
 }
-
-//home page
 .bodyContainer {
   background-color: map-get($colors, "tertiary-dark");
 }
+
+//home page
 @media screen and (min-width: $tabletBreakpoint) {
   .homePageTitle--container {
     margin-top: 100px;
     display: flex;
     justify-content: center;
   }
+  .homePageTitle--card {
+    background-color: map-get($colors, "secondary-light");
+  }
   .homePageCard {
     height: 585px;
   }
   .homePageCard img {
-    height: 250px;
+    height: 280px;
     width: 100%;
     object-fit: cover;
   }
