@@ -15,10 +15,6 @@ a:hover {
   color: #a30052;
 }
 
-.bodyContainer {
-  background-color: #323f54;
-}
-
 @media screen and (min-width: 768px) {
   .homePageTitle--container {
     margin-top: 100px;

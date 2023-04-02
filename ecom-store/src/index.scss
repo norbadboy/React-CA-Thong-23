@@ -21,9 +21,6 @@ a:hover {
 }
 
 //home page
-.bodyContainer {
-  background-color: map-get($colors, "tertiary-dark");
-}
 @media screen and (min-width: $tabletBreakpoint) {
   .homePageTitle--container {
     margin-top: 100px;
