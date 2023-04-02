@@ -8,7 +8,7 @@ import {
   StyledParagraph,
   StyledTextArea,
 } from "../../styles/StyledComponents/styledForm";
-import { Card, Col, Row } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const schema = yup
   .object()
@@ -42,50 +42,34 @@ function ContactPage() {
   };
 
   return (
-    <div xs={1} md={3} className="mt-4 pt-5">
-      <Card className="mx-5">
-        <Row>
+    <div xs={1} md={3} className="mt-4 pt-5 d-flex justify-content-center">
+      <Card className="px-5 py-3">
+        <div>
           <h1 align="center" className="mt-4">
             Contact Us
           </h1>
-        </Row>
-        <Row>
-          <Col>
-            <StyledForm onSubmit={handleSubmit(onSubmit)}>
-              <div>
-                {errors.fullName && <StyledParagraph>{errors.fullName.message}</StyledParagraph>}
-                <StyledInput type="text" placeholder="Full Name" {...register("fullName")} />
-              </div>
-              <div>
-                {errors.email && <StyledParagraph>{errors.email.message}</StyledParagraph>}
-                <StyledInput type="text" placeholder="Email" {...register("email")} />
-              </div>
-              <div>
-                {errors.subject && <StyledParagraph>{errors.subject.message}</StyledParagraph>}
-                <StyledInput type="text" placeholder="Subject" {...register("subject")} />
-              </div>
-              <div>
-                {errors.body && <StyledParagraph>{errors.body.message}</StyledParagraph>}
-                <StyledTextArea
-                  as="textarea"
-                  rows={5}
-                  placeholder="Message"
-                  {...register("body")}
-                />
-              </div>
-              <StyledButton type="submit" className="mt-2">
-                Submit
-              </StyledButton>
-            </StyledForm>
-          </Col>
-          <Col>
-            <div>
-              <h5 className="mt-4">Telephone</h5>
-              <p>00 11 22 33</p>
-            </div>
-            <div></div>
-          </Col>
-        </Row>
+        </div>
+        <StyledForm onSubmit={handleSubmit(onSubmit)}>
+          <div>
+            {errors.fullName && <StyledParagraph>{errors.fullName.message}</StyledParagraph>}
+            <StyledInput type="text" placeholder="Full Name" {...register("fullName")} />
+          </div>
+          <div>
+            {errors.email && <StyledParagraph>{errors.email.message}</StyledParagraph>}
+            <StyledInput type="text" placeholder="Email" {...register("email")} />
+          </div>
+          <div>
+            {errors.subject && <StyledParagraph>{errors.subject.message}</StyledParagraph>}
+            <StyledInput type="text" placeholder="Subject" {...register("subject")} />
+          </div>
+          <div>
+            {errors.body && <StyledParagraph>{errors.body.message}</StyledParagraph>}
+            <StyledTextArea as="textarea" rows={5} placeholder="Message" {...register("body")} />
+          </div>
+          <StyledButton type="submit" className="mt-2">
+            Submit
+          </StyledButton>
+        </StyledForm>
       </Card>
     </div>
   );

@@ -15,17 +15,24 @@ a:hover {
   color: #a30052;
 }
 
+.bodyContainer {
+  background-color: #323f54;
+}
+
 @media screen and (min-width: 768px) {
   .homePageTitle--container {
     margin-top: 100px;
     display: flex;
     justify-content: center;
   }
+  .homePageTitle--card {
+    background-color: #f7e6e6;
+  }
   .homePageCard {
     height: 585px;
   }
   .homePageCard img {
-    height: 250px;
+    height: 280px;
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;

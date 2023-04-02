@@ -6,12 +6,11 @@ const StyledForm = styled.form`
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border-radius: 0.5rem;
 `;
 
 const StyledInput = styled.input`
-  padding: 7px;
-  height: 40px;
+  padding: 15px;
+  height: 45px;
   outline: none;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.secondaryDark};
@@ -26,8 +25,9 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledTextArea = styled.textarea`
-  padding: 7px;
-  height: 100px;
+  padding-left: 15px;
+  padding-top: 10px;
+  height: 140px;
   outline: none;
   border-radius: 5px;
   border: 1px solid ${(props) => props.theme.color.secondaryDark};

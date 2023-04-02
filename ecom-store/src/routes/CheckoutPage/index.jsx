@@ -35,13 +35,13 @@ function Checkout() {
   };
 
   return (
-    <div className="d-flex flex-column">
-      <Row className="my-5 pt-5 ">
-        <h1 className="d-flex justify-content-center">Checkout</h1>
-      </Row>
+    <div className="d-flex flex-column my-5 pt-5 ">
       <Row>
         <div className="checkoutPageContainer d-flex">
           <Card className="px-5 py-4 flex-grow-1">
+            <div className="d-flex justify-content-center">
+              <h1 className="mb-4">Shopping Cart</h1>
+            </div>
             {checkoutItems.map((item, index) => (
               <div
                 key={item.id + index}
