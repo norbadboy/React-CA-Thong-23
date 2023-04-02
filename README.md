@@ -2,8 +2,8 @@
 
 ## Start
 
--Download the project and open it locally
+- Download the project and open it locally
 
--Open terminal in project folder and run npm i
+- Open terminal in project folder and run npm i
 
--Then run npm build
+- Then run npm build
