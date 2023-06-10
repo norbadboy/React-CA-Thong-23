@@ -32,8 +32,9 @@ There will be a contact page which will contain a contact form with the followin
 
 You can list a the tech stack that you've used over here
 
-- [React.js](https://reactjs.org/)
+- [HTML]
 - [Bootstrap](https://getbootstrap.com)
+- [SASS](https://sass-lang.com/)
 
 ## Getting Started
 
